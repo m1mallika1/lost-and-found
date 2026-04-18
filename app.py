@@ -8,10 +8,8 @@ from email.mime.multipart import MIMEMultipart
 
 # ------------------- CONFIG -------------------
 DATA_FILE = "data/lost_found_data.csv"
-import os
-
-EMAIL_SENDER = os.getenv("EMAIL_SENDER")
-EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_SENDER = "amyauclay01@gmail.com"
+EMAIL_PASSWORD = "sfwiofbhivznhwbc"
 # ----------------------------------------------
 
 st.set_page_config(page_title="Lost & Found", page_icon="💗", layout="wide")
