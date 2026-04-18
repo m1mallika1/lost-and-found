@@ -7,9 +7,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # ------------------- CONFIG -------------------
-DATA_FILE = "lost_found_data.csv"
-EMAIL_SENDER = "amyauclay01@gmail.com"
-EMAIL_PASSWORD = "sfwiofbhivznhwbc"
+DATA_FILE = "data/lost_found_data.csv"
+import os
+
+EMAIL_SENDER = os.getenv("EMAIL_SENDER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
 # ----------------------------------------------
 
 st.set_page_config(page_title="Lost & Found", page_icon="💗", layout="wide")
@@ -107,7 +109,7 @@ def match_items(df, new_entry):
 
 # ------------------- UI -------------------
 st.title("💗 Lost & Found System 💗")
-st.markdown("A cute yet smart cloud-based system to reunite people with their belongings 🎀")
+
 
 menu = st.sidebar.radio("Menu", ["Upload Item", "Search Items", "View All Items"])
 
